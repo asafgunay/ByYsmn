@@ -8,4 +8,8 @@
     <ProjectReference Include="..\ByYsmn.Core\ByYsmn.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
