@@ -39,7 +39,8 @@ namespace ByYsmn.Core.Companies
                 Address = address,
                 WebSiteUrl = webSiteUrl,
                 Email = email,
-                ModifierUserId = modifiedUserId
+                ModifierUserId = modifiedUserId,
+                ModifiedDate = DateTime.Now
             };
         }
     }

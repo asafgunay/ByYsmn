@@ -17,9 +17,9 @@ namespace ByYsmn.Application.CompanyServices
             _context = context;
         }
 
-        public Task<Company> Get(EntityInput<Guid> input)
+        public async Task<Company> Get(EntityInput<Guid> input)
         {
-            throw new NotImplementedException();
+            return await _context.Companies.FindAsync(input.Id);
         }
 
         public Task<List<Company>> GetAll()
@@ -44,9 +44,13 @@ namespace ByYsmn.Application.CompanyServices
             await _context.SaveChangesAsync();
             return company;
         }
-        public Task<Company> Update(CompanyUpdateInput input)
+        public async Task<Company> Update(CompanyUpdateInput input)
         {
-            throw new NotImplementedException();
+            var oldCompany = await Get(new EntityInput<Guid> { Id = input.Id });
+            var updateCompany = Company.Update(oldCompany, input.Name, input.Tel, input.Address, input.WebSiteUrl, input.Email, input.ModifierUserId);
+            _context.Companies.Update(updateCompany);
+            await _context.SaveChangesAsync();
+            return updateCompany;
         }
         public Task<bool> Delete(EntityInput<Guid> input)
         {
