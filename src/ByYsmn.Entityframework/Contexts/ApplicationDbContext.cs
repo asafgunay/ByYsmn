@@ -1,4 +1,5 @@
-﻿using ByYsmn.Core.Identity;
+﻿using ByYsmn.Core.Companies;
+using ByYsmn.Core.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -14,5 +15,6 @@ namespace ByYsmn.Entityframework.Contexts
         }
 
         // DbSetler buraya eklenecek.(Veritabani Modeller)
+        // public DbSet<Company> Companies { get; set; }
     }
 }

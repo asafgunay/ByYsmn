@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ByYsmn.Application\ByYsmn.Application.csproj" />
+    <ProjectReference Include="..\ByYsmn.Entityframework\ByYsmn.Entityframework.csproj" />
   </ItemGroup>
 
 </Project>
