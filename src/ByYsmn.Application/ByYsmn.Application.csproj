@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ByYsmn.Core\ByYsmn.Core.csproj" />
+    <ProjectReference Include="..\ByYsmn.Entityframework\ByYsmn.Entityframework.csproj" />
   </ItemGroup>
 
   <ItemGroup>
