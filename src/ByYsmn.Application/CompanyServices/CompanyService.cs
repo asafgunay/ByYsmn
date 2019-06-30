@@ -6,6 +6,7 @@ using ByYsmn.Application.CompanyServices.Dtos;
 using ByYsmn.Application.Shared;
 using ByYsmn.Core.Companies;
 using ByYsmn.Entityframework.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace ByYsmn.Application.CompanyServices
 {
@@ -22,9 +23,9 @@ namespace ByYsmn.Application.CompanyServices
             return await _context.Companies.FindAsync(input.Id);
         }
 
-        public Task<List<Company>> GetAll()
+        public async Task<List<Company>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Companies.ToListAsync();
         }
 
         public Task<List<Company>> GetAllByKeyWord(string input)
