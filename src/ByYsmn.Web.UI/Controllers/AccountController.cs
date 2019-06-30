@@ -49,7 +49,7 @@ namespace ByYsmn.Web.UI.Controllers
                     return View(model);
                 }
                 // 1.5- Giriş başarılı ise iletişime gönder
-                return RedirectToAction("Contact", "Home");
+                return RedirectToAction("Index", "Home");
             }
             // 2- Model hataliysa view'a gonder
             return View(model);
