@@ -13,6 +13,10 @@ namespace ByYsmn.Entityframework.Contexts
         : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
 
         // DbSetler buraya eklenecek.(Veritabani Modeller)
         public DbSet<Company> Companies { get; set; }

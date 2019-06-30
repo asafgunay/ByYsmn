@@ -31,7 +31,7 @@ namespace ByYsmn.Web.UI
         {
             
             services.AddDbContext<ApplicationDbContext>
-                (options => options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+                (options => options.UseSqlite(Configuration.GetConnectionString("SQLiteConnection")));
 
             services.Configure<CookiePolicyOptions>(options =>
             {

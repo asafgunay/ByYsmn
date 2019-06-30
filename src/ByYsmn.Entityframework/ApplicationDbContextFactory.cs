@@ -13,11 +13,11 @@ namespace ByYsmn.Entityframework
         {
             var dbContext = new ApplicationDbContext(
                 new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseSqlServer(
+                .UseSqlite(
                 new ConfigurationBuilder()
                 .AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), $"appsettings.json"))
                 .Build()
-                .GetConnectionString("DatabaseConnection")
+                .GetConnectionString("SQLiteConnection")
                 ).Options);
             // dbContext.Database.Migrate();
             return dbContext;
