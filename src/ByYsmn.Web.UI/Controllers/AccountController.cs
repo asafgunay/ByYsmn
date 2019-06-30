@@ -86,7 +86,7 @@ namespace ByYsmn.Web.UI.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Contact", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
